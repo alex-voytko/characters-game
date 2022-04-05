@@ -1,0 +1,54 @@
+body {
+  width: 600px;
+  padding: 40px;
+  background-color: #272727;
+}
+button {
+  padding: 20px;
+  font-size: 20px;
+  margin-right: 13px;
+  border-radius: 7px;
+  border: none;
+}
+button:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+button:last-child {
+  margin-right: 0;
+}
+button:disabled:hover {
+  background-color: currentColor;
+}
+.characters-container {
+  width: fit-content;
+}
+.choose-character {
+  display: block;
+  width: fit-content;
+  font-size: 20px;
+  color: white;
+}
+.choose-character span {
+  color: aqua;
+}
+.descr-container {
+  display: flex;
+  justify-content: space-between;
+}
+.win-stats {
+  color: white;
+  font-size: 20px;
+}
+.win-stats span {
+  color: red;
+}
+.win-stats.win {
+  color: aqua;
+}
+.win-stats.lose {
+  color: red;
+}
+.win-stats.draw {
+  color: rgb(223, 223, 223);
+}
