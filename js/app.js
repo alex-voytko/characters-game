@@ -49,27 +49,21 @@ function gameProcessStart(arr, userChoice, compChoice) {
     return renderStats("Draw", "draw", arr[compChoice]);
 
   const findTheHalf = Math.floor(arr.length / 2);
-  console.log(findTheHalf);
-  console.log(userChoice);
 
   if (userChoice <= findTheHalf) {
     userWinItems = arr.slice(userChoice + 1, userChoice + findTheHalf + 1);
-    console.log(userWinItems);
     return determineTheWinner(userWinItems, arr[compChoice]);
   } else {
     userWinItems = [...arr];
     userWinItems.splice(userChoice - findTheHalf, findTheHalf + 1);
-    console.log(userWinItems);
     return determineTheWinner(userWinItems, arr[compChoice]);
   }
 }
 
 function determineTheWinner(winItems, compChoice) {
   if (winItems.includes(compChoice)) {
-    console.log("Congratulations! You're a winner!");
     return renderStats("Congratulations! You're a winner!", "win", compChoice);
   }
-  console.log("Sorry, the computer has won");
   return renderStats("Sorry, the computer has won", "lose", compChoice);
 }
 
